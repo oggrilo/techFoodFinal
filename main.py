@@ -1,6 +1,8 @@
 import conexao
+import crudFuncionario
 import operacoes
-import menu
+import menuLogin
 
 if __name__ == "__main__":
-    menu.operacao()
+    #crudFuncionario.operacao()
+    menuLogin.escolhas()

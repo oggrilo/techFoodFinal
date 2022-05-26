@@ -1,14 +1,14 @@
 import operacoes
 import this
-import menu
 import conexao
 this.opcao = -1
 
 
 def menu():
     print('\n\nEscolha uma das opções abaixo: \n\n' +
-            '1. Cadastrar\n'                        +
-            '2. Login\n'                        +
+            '1. Cadastrar Cliente\n' +
+            '2. Login Cliente\n' +
+            '3. Login Adiministrador\n' +
             '0. Sair')
     this.opcao = int(input())
 
@@ -29,10 +29,16 @@ def escolhas():
             operacoes.inserirCliente(nomeCliente, cpfCliente, celularCliente, senhaCliente)
         elif this.opcao == 2:
             print("Digite seu CPF: ")
-            cpfCliente = input()
+            cpfCliente= input()
             print("Digite sua senha: ")
             senhaCliente = input()
-            operacoes.loginCliente()
+            operacoes.loginCliente(cpfCliente, senhaCliente)
+        elif this.opcao == 3:
+            print("Digite seu CPF: ")
+            cpfFunc = input()
+            print("Digite sua senha: ")
+            senhaFunc = input()
+            operacoes.loginFunc(cpfFunc, senhaFunc)
         else:
              print("Obrigado e até a proxima!")
 
